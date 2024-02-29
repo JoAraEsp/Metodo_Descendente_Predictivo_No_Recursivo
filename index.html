@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tabla Predictiva</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif; 
+    margin: 20px auto;
+    padding: 0; 
+    box-sizing: border-box; 
+    max-width: 800px; /* Ajusta este valor según el ancho deseado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  textarea, #procesarTexto, #resultado { 
+    width: 100%; 
+    max-width: 600px; 
+    box-sizing: border-box; 
+  }
+  textarea { 
+    height: 150px; 
+    margin-bottom: 10px; 
+    padding: 8px; 
+  }
+  #procesarTexto { 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    cursor: pointer; 
+  }
+  #resultado { 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ddd; 
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @media (max-width: 768px) {
+    body { 
+      margin: 10px auto; 
+      padding: 10px; 
+    }
+    textarea, #procesarTexto { 
+      width: calc(100% - 20px); 
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Ingresa tu texto</h2>
+<textarea id="textoEntrada"></textarea>
+<button id="procesarTexto" onclick="parse()">Procesar Texto</button>
+
+<div id="resultado">
+  <h3>Resultado:</h3>
+  <div id="contenidoResultado"></div>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>
